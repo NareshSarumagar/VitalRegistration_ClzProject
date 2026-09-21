@@ -5,6 +5,8 @@ import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 import DateOfBirthRegister from "./pages/DateOfBirthRegister";
+import DeathRegister from "./pages/DeathRegister";
+import MarriageRegister from "./pages/MarriageRegister";
 
 function App() {
   return (
@@ -14,11 +16,37 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/dateofbirth" element={<DateOfBirthRegister/>} />
+          <Route path="/death" element={<DeathRegister/>}></Route>
+          <Route path="/marriage" element={<MarriageRegister />}></Route>
           <Route
             path="/dashboard"
             element={
               <ProtectedRoute>
                 <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+           <Route
+            path="/register/birth"
+            element={
+              <ProtectedRoute>
+                <DateOfBirthRegister />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/register/death"
+            element={
+              <ProtectedRoute>
+                <DeathRegister />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/register/marriage"
+            element={
+              <ProtectedRoute>
+                <MarriageRegister />
               </ProtectedRoute>
             }
           />
