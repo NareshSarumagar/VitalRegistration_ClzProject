@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { body } from "express-validator";
 import rateLimit from "express-rate-limit";
-import  {
+import   {
   register,
   login,
   refresh,
